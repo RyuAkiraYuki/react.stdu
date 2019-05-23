@@ -37,4 +37,5 @@ html, body {
 }
 
 .player-preview>.player-stage>#ac-lre-player {
+  font: 13px;
 }
