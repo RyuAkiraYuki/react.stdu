@@ -4,9 +4,9 @@ class LreElements {
             id: 0,
             layer: 'branding',
             title: 'Player Branding Area',
-            styleProps: {
-                bgColor: 'transparent'
-            },
+            styleProps: [
+                { 'background-color': 'transparent' }
+            ],
             elements: [
                 {
                     id: 0,
@@ -37,7 +37,7 @@ class LreElements {
         {
             id: 1,
             layer: 'screen',
-            title:'Player Screen Area',
+            title: 'Player Screen Area',
             elements: [
                 {
                     id: 0,
