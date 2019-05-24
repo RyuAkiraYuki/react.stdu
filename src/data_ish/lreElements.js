@@ -42,6 +42,7 @@ class LreElements {
                 {
                     id: 0,
                     element: 'videoTitle',
+                    title: 'Current Video Title Styling',
                     styleProps: {
                         fontFace: 'Roboto',
                         fontSize: 12,
@@ -51,6 +52,7 @@ class LreElements {
                 {
                     id: 1,
                     element: 'playbackControls',
+                    title: 'Playback Controls Styling',
                     elements: [
                         {
                             id: 0,
