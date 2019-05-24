@@ -3,6 +3,7 @@ class LreElements {
         {
             id: 0,
             layer: 'branding',
+            title: 'Player Branding Area',
             styleProps: {
                 bgColor: 'transparent'
             },
@@ -10,6 +11,7 @@ class LreElements {
                 {
                     id: 0,
                     element: 'leftBranding',
+                    title: 'Left Branding Styling',
                     styleProps: {
                         fontFace: 'Roboto',
                         fontSize: 12,
@@ -21,6 +23,7 @@ class LreElements {
                 {
                     id: 1,
                     element: 'rightBranding',
+                    title: 'Right Branding Styling',
                     properties: {
                         fontFace: 'Roboto',
                         fontSize: 12,
@@ -33,7 +36,8 @@ class LreElements {
         },
         {
             id: 1,
-            layer: 'player',
+            layer: 'screen',
+            title:'Player Screen Area',
             elements: [
                 {
                     id: 0,

@@ -17,7 +17,7 @@ class App extends Component {
         <div className="tool-box">
           <h1>Tool box here!</h1>
           <div className="tools">
-            <PlayerAreas pickerz={this.state.lrePlayer} />
+            <PlayerAreas areas={this.state.lrePlayer} />
           </div>
 
         </div>

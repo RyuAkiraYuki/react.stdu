@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import PickerComponent from './components/PickerComponent'
 
-class PickerComponent extends Component {
+class AreaElements extends Component {
   render() {
     return this.props.pickerz.map((picker)=>(
         <li key={picker.id} className={'tool-item ' + picker.type} >{picker.title}</li>
@@ -9,4 +8,4 @@ class PickerComponent extends Component {
   }
 }
 
-export default PickerComponent;
+export default AreaElements;
