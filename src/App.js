@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="lre-theme-app">
         <div className="tool-box">
-          <h1>Tool box here!</h1>
+          <div className="">Lre Player Theme Builder</div>
           <div className="tools">
             <PlayerAreas areas={this.state.lrePlayer} />
           </div>
