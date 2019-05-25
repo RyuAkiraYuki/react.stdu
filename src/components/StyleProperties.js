@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import StyleProperty from './StyleProperty';
 
 class StyleProperties extends Component {
   render() {
-    console.log('StyleProperties', this.props);
+    console.log('StyleProperties => structure: ', this.props.styles);
     if (this.props.styles) {
       return this.props.styles.map((property) => (
-        <div className="styles-block">
-          <StyleProperty structure={property} />
-        </div>
+          <div key={property.id} className="property-block">
+            <span className="property-name">{property.propertyName}</span>: <input className="property-value" value={property.propertyValue} />
+          </div>
       ))
     } else {
       return '';

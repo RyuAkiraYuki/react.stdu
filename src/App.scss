@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$title-font-colors: rgb(44, 44, 44);
+$app-text-color: lighten($title-font-colors, 17%);
+$app-bg-color: rgb(240, 240, 240);
+$lre-main-color: #a43cff;
+$app-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+html,
+body {
+  height: 100%;
+  background-color: $app-bg-color;
+  color: $app-text-color;
+}
+
+#root {
+  font-family: $app-font-family;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  [class$=-title] {
+    font-weight: bold;
+  }
+
+  .lre-theme-app {
+    display: flex;
+    flex-direction: row;
+
+    .tool-box {
+      flex-grow: 2;
+      border-right: ridge 3px $lre-main-color;
+
+      .theme-editor-title {
+        font-size: 20px;
+        color: $title-font-colors;
+        border-bottom: 3px groove $lre-main-color;
+      }
+
+      .tools-area {
+        margin-top: 7px;
+        padding-left: 3px;
+        max-height: 500px;
+        overflow-y: scroll;
+
+        .tool-area-layer {
+          border-left: 7px solid $lre-main-color;
+          padding-left: 3px;
+          margin-bottom: 13px;
+
+          .styles-block {
+            padding-left: 7px;
+            border-left: 5px ridge lighten($lre-main-color, 20%)
+          }
+
+          .area-layer-title {
+            font-size: 20px;
+            color: $title-font-colors;
+          }
+          .area-element-block {
+            margin-top: 3px;
+            padding-left: 3px;
+            margin-bottom: 7px;
+            border-left: lighten($lre-main-color, 15%) 3px solid;
+
+            .el-block-title {
+              border-bottom: 3px ridge lighten($lre-main-color, 15%);
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .player-preview {
+      flex-grow: 4;
+
+      .player-stage {
+        display: block;
+        margin: 0 auto;
+        width: 680px;
+      }
+    }
+  }
+}

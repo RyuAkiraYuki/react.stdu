@@ -5,32 +5,82 @@ class LreElements {
             layer: 'branding',
             title: 'Player Branding Area',
             styleProps: [
-                { 'background-color': 'transparent' }
+                { 
+                    id: 0,
+                    propertyName: 'background-color',
+                    propertyValue: 'transparent' 
+                },
+                { 
+                    id: 1,
+                    propertyName: 'font-size',
+                    propertyValue: '10px' 
+                },
             ],
             elements: [
                 {
                     id: 0,
                     element: 'leftBranding',
                     title: 'Left Branding Styling',
-                    styleProps: {
-                        fontFace: 'Roboto',
-                        fontSize: 12,
-                        fontColor: '#ccc',
-                        bgColor: 'transparent',
-                        width: '50%'
-                    }
+                    styleProps: [
+                        { 
+                            id: 0,
+                            propertyName: 'font-family',
+                            propertyValue: 'Roboto' 
+                        },
+                        { 
+                            id: 1,
+                            propertyName: 'font-size',
+                            propertyValue: '12px' 
+                        },
+                        { 
+                            id: 2,
+                            propertyName: 'color',
+                            propertyValue: '#ccc' 
+                        },
+                        { 
+                            id: 3,
+                            propertyName: 'background-color',
+                            propertyValue: 'transparent' 
+                        },
+                        { 
+                            id: 4,
+                            propertyName: 'width',
+                            propertyValue: '50%' 
+                        }
+                    ]
                 },
                 {
                     id: 1,
                     element: 'rightBranding',
                     title: 'Right Branding Styling',
-                    properties: {
-                        fontFace: 'Roboto',
-                        fontSize: 12,
-                        fontColor: '#ccc',
-                        bgColor: 'transparent',
-                        width: '50%'
-                    }
+                    styleProps: [
+                        { 
+                            id: 0,
+                            propertyName: 'font-family',
+                            propertyValue: 'Roboto' 
+                        },
+                        { 
+                            id: 1,
+                            propertyName: 'font-size',
+                            propertyValue: '12px' 
+                        },
+                        { 
+                            id: 2,
+                            propertyName: 'color',
+                            propertyValue: '#ccc' 
+                        },
+                        { 
+                            id: 3,
+                            propertyName: 'background-color',
+                            propertyValue: 'transparent' 
+                        },
+                        { 
+                            id: 4,
+                            propertyName: 'width',
+                            propertyValue: '50%' 
+                        }
+                    ]
+                
                 }
             ]
         },
@@ -43,11 +93,23 @@ class LreElements {
                     id: 0,
                     element: 'videoTitle',
                     title: 'Current Video Title Styling',
-                    styleProps: {
-                        fontFace: 'Roboto',
-                        fontSize: 12,
-                        fontColor: '#ccc'
-                    }
+                    styleProps: [
+                        { 
+                            id: 0,
+                            propertyName: 'font-family',
+                            propertyValue: 'Roboto' 
+                        },
+                        { 
+                            id: 1,
+                            propertyName: 'font-size',
+                            propertyValue: '12px' 
+                        },
+                        { 
+                            id: 2,
+                            propertyName: 'color',
+                            propertyValue: '#ccc' 
+                        }
+                    ]
                 },
                 {
                     id: 1,
@@ -57,26 +119,50 @@ class LreElements {
                         {
                             id: 0,
                             element: 'playerProgressControl',
-                            styleProps: {
-                                height: '3px',
-                                bgColor: '#a43cff'
-                            }
+                            styleProps: [
+                                { 
+                                    id: 0,
+                                    propertyName: 'height',
+                                    propertyValue: '3px' 
+                                },
+                                { 
+                                    id: 1,
+                                    propertyName: 'background-color',
+                                    propertyValue: '#a43cff' 
+                                }
+                            ]
                         },
                         {
                             id: 1,
                             element: 'playerLoadProgressControl',
-                            styleProps: {
-                                height: '3px',
-                                bgColor: '#dfbbff'
-                            }
+                            styleProps: [
+                                { 
+                                    id: 0,
+                                    propertyName: 'height',
+                                    propertyValue: '3px' 
+                                },
+                                { 
+                                    id: 1,
+                                    propertyName: 'background-color',
+                                    propertyValue: '#dfbbff' 
+                                }
+                            ]
                         },
                         {
                             id: 2,
                             element: 'playerProgressHolderControl',
-                            styleProps: {
-                                height: '3px',
-                                bgColor: '#d8d8d8'
-                            }
+                            styleProps: [
+                                { 
+                                    id: 0,
+                                    propertyName: 'height',
+                                    propertyValue: '3px' 
+                                },
+                                { 
+                                    id: 1,
+                                    propertyName: 'background-color',
+                                    propertyValue: '#d8d8d8' 
+                                }
+                            ]
                         }
                     ]
                 }

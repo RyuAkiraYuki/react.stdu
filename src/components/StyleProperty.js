@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 
 class StyleProperty extends Component {
   render() {
-    console.log('StyleProperty',this.props.structure);
+    console.log('StyleProperty => structure: ',this.props.structure);
     if(this.props.structure){
-      return Object.entries(this.props.structure).map(([name,value]) => (
-        <div className="property-block">
-          <span className="property-name">
-            {name}
-          </span> : 
-          <span className="property-value">
-            {value}
-          </span>
+      return Object.values(this.props.structure).map(([key,val]) => (
+        <div key={key} className="property-block">
+          <span className="property-name">{key}</span>: <input className="property-value" value={val} />
         </div>
       ))
     } else {

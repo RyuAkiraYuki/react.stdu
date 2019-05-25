@@ -4,12 +4,22 @@ import StyleProperties from './StyleProperties';
 
 class PlayerAreas extends Component {
   render() {
-    return this.props.areas.map((area)=>(
-        <div key={area.id} className={'tool-item ' + area.type}>
-          <div className="area-title">{area.title}</div>
-          <AreaElements  structure={area.elements}/>
-          <StyleProperties structure={area.styleProps}/>
-        </div>
+    return this.props.areas.map((area) => (
+      <div key={area.id} className={'tool-area-layer ' + area.layer}>
+        <div className="area-layer-title">{area.title}</div>
+        {(() => {
+            if (area.styleProps) {
+              return (
+                <div className="styles-block">
+                  <StyleProperties styles={area.styleProps} />
+                </div>
+              ) 
+            }
+          })()}
+
+        <AreaElements structure={area.elements} />
+
+      </div>
     ));
   }
 }

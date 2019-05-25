@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PlayerAreas from './components/PlayerAreas';
 import LreElements from './data_ish/lreElements';
-import './App.css';
+import './App.scss';
 
 let playerStructure = new LreElements();
 
@@ -15,8 +15,8 @@ class App extends Component {
     return (
       <div className="lre-theme-app">
         <div className="tool-box">
-          <div className="">Lre Player Theme Builder</div>
-          <div className="tools">
+          <div className="theme-editor-title">Lre Player Theme Builder</div>
+          <div className="tools-area">
             <PlayerAreas areas={this.state.lrePlayer} />
           </div>
 
