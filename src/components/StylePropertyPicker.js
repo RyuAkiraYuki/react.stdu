@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { SketchPicker } from 'react-color';
 import ColorPicker from 'rc-color-picker';
-// import FontPicker from "font-picker-react";
+import FontPicker from "font-picker-react";
 import DOMManipulatons from '../tools/domManipulations';
 
 import 'rc-color-picker/assets/index.css';
@@ -18,14 +18,18 @@ class StylePropertyPicker extends Component {
     this.setState({ currentValue: color.color });
   }
 
+  fontPickChangeHandler = (font) => {
+    this.setState({ currentValue: font.family+' !important' });
+  }
+
   inputFieldChangeHandler = (evt) => {
     this.setState({ currentValue: evt.target.value });
   }
   submitBtnHandler = () => {
-    if(!this.state.selector) return;
-    let styleContainerId = this.props.selector.areaElementName+'-'+this.props.structure.propertyName+'-'+this.props.structure.id;
-    
-    domMethods.UpdateStyle(styleContainerId,`${this.state.selector.areaSelector} {
+    if (!this.state.selector) return;
+    let styleContainerId = this.props.selector.areaElementName + '-' + this.props.structure.propertyName + '-' + this.props.structure.id;
+
+    domMethods.UpdateStyle(styleContainerId, `${this.state.selector.areaSelector} {
       ${this.props.structure.propertyName}:${this.state.currentValue};
     }`)
   }
@@ -50,15 +54,23 @@ class StylePropertyPicker extends Component {
         </span>
 
       )
-      // case ('font'): return (
-      //   <FontPicker activeFontFamily={ property.propertyValue } onChangeComplete={this.colorPickHandler} />
-      // )
+      case ('font'): return (
+
+        <span className="picker-block">
+          <FontPicker
+            apiKey="AIzaSyAUbwxT6t3SbvTonwTfxc3KZ-nbQNRxNjA"
+            activeFontFamily={this.state.currentValue}
+            onChange={this.fontPickChangeHandler}
+          />
+          <button className="submit-area-button" onClick={this.submitBtnHandler}>Submit property</button>
+        </span>
+      )
       default: return (
         <span className="picker-block">
           <input className="property-value default" value={this.state.currentValue} onChange={this.inputFieldChangeHandler} />
           <button className="submit-area-button" onClick={this.submitBtnHandler}>Submit property</button>
         </span>
-        
+
       )
     }
   }
