@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StylePropertyPicker from './StylePropertyPicker';
 
 class StyleProperties extends Component {
   render() {
@@ -6,7 +7,7 @@ class StyleProperties extends Component {
     if (this.props.styles) {
       return this.props.styles.map((property) => (
           <div key={property.id} className="property-block">
-            <span className="property-name">{property.propertyName}</span>: <input className="property-value" value={property.propertyValue} />
+            <span className="property-name">{property.propertyName}</span>:  <StylePropertyPicker structure={property} />
           </div>
       ))
     } else {

@@ -8,7 +8,8 @@ class LreElements {
                 { 
                     id: 0,
                     propertyName: 'background-color',
-                    propertyValue: 'transparent' 
+                    propertyValue: 'transparent',
+                    pickerType: 'color'
                 },
                 { 
                     id: 1,
@@ -21,11 +22,13 @@ class LreElements {
                     id: 0,
                     element: 'leftBranding',
                     title: 'Left Branding Styling',
+                    cssSelector: '#brand-container #ac-branding-left-text',
                     styleProps: [
                         { 
                             id: 0,
                             propertyName: 'font-family',
-                            propertyValue: 'Roboto' 
+                            propertyValue: '"RobotoLre", sans-serif !important',
+                            pickerType: 'font'
                         },
                         { 
                             id: 1,
@@ -35,12 +38,14 @@ class LreElements {
                         { 
                             id: 2,
                             propertyName: 'color',
-                            propertyValue: '#ccc' 
+                            propertyValue: '#ccc',
+                            pickerType: 'color'
                         },
                         { 
                             id: 3,
                             propertyName: 'background-color',
-                            propertyValue: 'transparent' 
+                            propertyValue: 'transparent',
+                            pickerType: 'color'
                         },
                         { 
                             id: 4,
@@ -57,7 +62,8 @@ class LreElements {
                         { 
                             id: 0,
                             propertyName: 'font-family',
-                            propertyValue: 'Roboto' 
+                            propertyValue: 'Roboto',
+                            pickerType: 'font'
                         },
                         { 
                             id: 1,
@@ -67,12 +73,14 @@ class LreElements {
                         { 
                             id: 2,
                             propertyName: 'color',
-                            propertyValue: '#ccc' 
+                            propertyValue: '#ccc',
+                            pickerType: 'color'
                         },
                         { 
                             id: 3,
                             propertyName: 'background-color',
-                            propertyValue: 'transparent' 
+                            propertyValue: 'transparent',
+                            pickerType: 'color'
                         },
                         { 
                             id: 4,
@@ -97,7 +105,8 @@ class LreElements {
                         { 
                             id: 0,
                             propertyName: 'font-family',
-                            propertyValue: 'Roboto' 
+                            propertyValue: 'Roboto',
+                            pickerType: 'font'
                         },
                         { 
                             id: 1,
@@ -107,7 +116,8 @@ class LreElements {
                         { 
                             id: 2,
                             propertyName: 'color',
-                            propertyValue: '#ccc' 
+                            propertyValue: '#ccc',
+                            pickerType: 'color'
                         }
                     ]
                 },
@@ -119,6 +129,7 @@ class LreElements {
                         {
                             id: 0,
                             element: 'playerProgressControl',
+                            title:'Player progress control',
                             styleProps: [
                                 { 
                                     id: 0,
@@ -128,13 +139,15 @@ class LreElements {
                                 { 
                                     id: 1,
                                     propertyName: 'background-color',
-                                    propertyValue: '#a43cff' 
+                                    propertyValue: '#a43cff',
+                                    pickerType: 'color'
                                 }
                             ]
                         },
                         {
                             id: 1,
                             element: 'playerLoadProgressControl',
+                            title:'Player load progress control',
                             styleProps: [
                                 { 
                                     id: 0,
@@ -144,13 +157,15 @@ class LreElements {
                                 { 
                                     id: 1,
                                     propertyName: 'background-color',
-                                    propertyValue: '#dfbbff' 
+                                    propertyValue: '#dfbbff',
+                                    pickerType: 'color'
                                 }
                             ]
                         },
                         {
                             id: 2,
                             element: 'playerProgressHolderControl',
+                            title:'Player progress holder control',
                             styleProps: [
                                 { 
                                     id: 0,
@@ -160,7 +175,8 @@ class LreElements {
                                 { 
                                     id: 1,
                                     propertyName: 'background-color',
-                                    propertyValue: '#d8d8d8' 
+                                    propertyValue: '#d8d8d8',
+                                    pickerType: 'color'
                                 }
                             ]
                         }

@@ -61,6 +61,7 @@ body {
           .area-layer-title {
             font-size: 20px;
             color: $title-font-colors;
+            border-bottom: 3px double $lre-main-color;
           }
           .area-element-block {
             margin-top: 3px;
@@ -70,6 +71,20 @@ body {
 
             .el-block-title {
               border-bottom: 3px ridge lighten($lre-main-color, 15%);
+            }
+          }
+        }
+
+        .styles-block {
+          .property-block {
+            .property-name {
+              font-weight: bold;
+              font-size: 12px;
+            }
+
+            .picker-block {
+              display: flex;
+              flex-direction: row;
             }
           }
         }
