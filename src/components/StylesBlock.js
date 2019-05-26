@@ -6,7 +6,7 @@ class StylesBlock extends Component {
     if(!this.props.styles) return null;
     return (
       <div className="styles-block">
-        <StyleProperties styles={this.props.styles} />
+        <StyleProperties selector={this.props.selector}  styles={this.props.styles} />
       </div>
     )
   }

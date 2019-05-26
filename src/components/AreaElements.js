@@ -10,8 +10,16 @@ class AreaElements extends Component {
         <div className="el-block-title">
           {element.title}
         </div>
-        <StylesBlock styles={element.styleProps} />
+        <StylesBlock
+          selector={{
+            areaSelector: element.cssSelector,
+            areaElementName: element.element
+          }}
+          styles={element.styleProps}
+        />
         <AreaElements structure={element.elements} />
+
+        {/* <button className="submit-area-button" onClick={this.areaSubmitHandler}>Submit Area</button> */}
       </div>
     ));
   }

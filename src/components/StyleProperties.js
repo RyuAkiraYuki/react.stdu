@@ -7,7 +7,7 @@ class StyleProperties extends Component {
     if (this.props.styles) {
       return this.props.styles.map((property) => (
           <div key={property.id} className="property-block">
-            <span className="property-name">{property.propertyName}</span>:  <StylePropertyPicker structure={property} />
+            <span className="property-name">{property.propertyName}</span>:  <StylePropertyPicker selector={this.props.selector} structure={property} />
           </div>
       ))
     } else {

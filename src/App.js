@@ -6,6 +6,7 @@ import './App.scss';
 let playerStructure = new LreElements();
 
 class App extends Component {
+
   state = {
     lrePlayer: playerStructure.lrePlayer,
   }

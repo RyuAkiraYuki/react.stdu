@@ -8,7 +8,8 @@ $title-font-colors: rgb(44, 44, 44);
 $app-text-color: lighten($title-font-colors, 17%);
 $app-bg-color: rgb(240, 240, 240);
 $lre-main-color: #a43cff;
-$app-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$app-font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+  sans-serif;
 
 html,
 body {
@@ -24,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  [class$=-title] {
+  [class$="-title"] {
     font-weight: bold;
   }
 
@@ -55,7 +56,7 @@ body {
 
           .styles-block {
             padding-left: 7px;
-            border-left: 5px ridge lighten($lre-main-color, 20%)
+            border-left: 5px ridge lighten($lre-main-color, 20%);
           }
 
           .area-layer-title {
@@ -75,22 +76,46 @@ body {
           }
         }
 
+        .submit-area-button {
+          height: 20px;
+          padding: 0 7px;
+          background-color: $lre-main-color;
+          border: 1px solid darken($lre-main-color, 26%);
+          border-radius: 3px;
+          color: white;
+          margin-left: 7px;
+
+          &:hover {
+            background-color: darken($lre-main-color, 26%);
+          }
+        }
+
         .styles-block {
           .property-block {
+            display: flex;
+            flex-direction: row;
+            margin: 7px 0;
             .property-name {
               font-weight: bold;
               font-size: 12px;
+              line-height: 20px;
             }
 
             .picker-block {
               display: flex;
               flex-direction: row;
+
+              .rc-color-picker-wrap {
+                display: flex;
+              }
+
+              .property-value.color {
+                margin-right: 10px;
+              }
             }
           }
         }
-
       }
-
     }
 
     .player-preview {
