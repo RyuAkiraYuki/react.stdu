@@ -6,8 +6,6 @@ import DOMManipulatons from '../tools/domManipulations';
 
 import 'rc-color-picker/assets/index.css';
 
-let domMethods = new DOMManipulatons();
-
 class StylePropertyPicker extends Component {
   state = {
     currentValue: this.props.structure.propertyValue,
@@ -29,7 +27,7 @@ class StylePropertyPicker extends Component {
     if (!this.state.selector) return;
     let styleContainerId = this.props.selector.areaElementName + '-' + this.props.structure.propertyName + '-' + this.props.structure.id;
 
-    domMethods.UpdateStyle(styleContainerId, `${this.state.selector.areaSelector} {
+    DOMManipulatons.UpdateStyle(styleContainerId, `${this.state.selector.areaSelector} {
       ${this.props.structure.propertyName}:${this.state.currentValue};
     }`)
   }

@@ -1,5 +1,5 @@
 class DOMManipulatons {
-    UpdateStyle = (styleHolderID,styleContent) => {
+    static UpdateStyle = (styleHolderID,styleContent) => {
         let styleElement = document.getElementById(styleHolderID);
         if(!styleElement){
             document.querySelector('head').insertAdjacentHTML('beforeend',`
